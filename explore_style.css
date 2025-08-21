@@ -1,4 +1,4 @@
-* { margin: 0; padding: 0; box-sizing: border-box; }
+* { margin: 0; padding: 0; box-sizing: border-box; a{user-select: none;} }
 
 
     /* Main Content */
@@ -120,4 +120,5 @@
     .download-button:hover {
       background-color: #004D40;
       transform: translateY(-2px);
+
     }
