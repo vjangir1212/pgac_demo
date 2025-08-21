@@ -1,4 +1,5 @@
-* { margin: 0; padding: 0; box-sizing: border-box; a{user-select: none;}}
+* { margin: 0; padding: 0; box-sizing: border-box; 
+   a{user-select: none;-webkit-user-select: none; -webkit-touch-callout: none; -webkit-tap-highlight-color: transparent;}}
 
 #people{
 
@@ -151,6 +152,7 @@
         color: #ffffff;
         z-index: -2;
     }
+
 
 
 
