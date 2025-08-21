@@ -97,6 +97,20 @@ color: #26C6DA;}
   p{font-size: large;}
 }
 
+/* New animation for the typing cursor */
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: var(--ink); }
+}
+
+.typing-container {
+    border-right: .15em solid var(--ink); /* The typewriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    overflow: hidden; /* Ensures the content is not shown until revealed */
+    animation: blink-caret 0.75s step-end infinite;
+}
+
+
 .hero h1 { font-size: 2.5rem; margin-bottom: 1rem; color: #0f3836; }
 .hero h2 { font-size: 2.5rem; margin-bottom: 1rem; color:#07525e;}
 p{color: #0f3836;}
@@ -157,5 +171,6 @@ footer { background: var(--footer);
 
 
  
+
 
 
