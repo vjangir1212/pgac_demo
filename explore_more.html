@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="explore_more.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+
+
+</head>
+<body>
+
+    <!-- Navbar -->
+  <header>
+    <div class="container nav">
+      <a href="#home" class="logo">PGAC</a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html#home">Home</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#people">People</a></li>
+          <li><a href="index.html#events">Events</a></li>
+          <li><a href="index.html#resources">Explore</a></li>
+          <li><a href="index.html#contact">Contact </a></li>
+
+        </ul>
+
+       
+      </nav>
+
+
+      <!-- Hamburger Icon -->
+        <div class="hamburger">
+            <i onclick="showsidebar()" class="fa-solid fa-bars-staggered"></i>
+         </div>
+
+
+      <!-- sidebar -->
+        <div class="sidebar">
+            <i id="i1" onclick="hidesidebar()" class="fa-solid fa-xmark"></i>
+            <a href="index.html#home"><i class="fa-solid fa-house-chimney"></i> Home</a>
+            <a href="index.html#about"><i class="fa-solid fa-address-card"></i> About</a>
+            <a href="index.html#people"><i class="fa-solid fa-person"></i> People</a>
+            <a href="index.html#events"><i class="fa-solid fa-calendar-days"></i> Events</a>
+            <a href="index.html#resources"><i class="fa-solid fa-magnifying-glass"></i> Explore</a>
+            <a href="index.html#contact"><i class="fa-solid fa-address-book"></i> Contact</a>
+        </div> 
+
+        <script>
+            function showsidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'flex'}
+        </script> 
+        
+        <script>
+            function hidesidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'none'}
+        </script>  
+
+
+    </div>
+  </header>
+
+  <section class="pgac_structure bg-gray-100 flex flex-col items-center p-4">
+
+  <h1 class="text-2xl md:text-3xl lg:text-4xl font-extrabold text-green-700 mb-6 text-center leading-tight">
+    PGAC - STRUCTURE<br>
+  </h1>
+
+  <div class="chart-container">
+    <div class="top-level">
+      <div class="box">
+        GSAA-PG
+      </div>
+      <div class="connector-line"></div>
+      <div class="arrow-down"></div>
+    </div>
+    
+    <div class="horizontal-connector my-4 md:w-[90%] w-[80%]"></div>
+    
+    <div class="main-branch">
+      <!-- IMR Tree -->
+      <div class="main-branch-item">
+        <div class="imr-tree">
+          <div class="connector-line"></div>
+          <div class="arrow-down"></div>
+          <div class="box">
+            IMR
+          </div>
+          <div class="connector-line"></div>
+          <div class="arrow-down"></div>
+          <div class="box">
+            EM
+          </div>
+          <div class="connector-line"></div>
+          <div class="arrow-down"></div>
+          <div class="horizontal-connector my-4 w-[100%]"></div>
+          <div class="sub-branch-group">
+            <div class="main-branch-item">
+              <div class="connector-line"></div>
+              <div class="arrow-down"></div>
+              <div class="box">
+                AURAA
+              </div>
+            </div>
+            <div class="main-branch-item">
+              <div class="connector-line"></div>
+              <div class="arrow-down"></div>
+              <div class="box">
+                ACC
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Other Branches -->
+      <div class="main-branch-item" style="flex-basis: 15%; min-width: 150px;">
+        <div class="connector-line"></div>
+        <div class="arrow-down"></div>
+        <div class="box compact">
+          IDR
+        </div>
+      </div>
+      
+      <div class="main-branch-item" style="flex-basis: 15%; min-width: 150px;">
+        <div class="connector-line"></div>
+        <div class="arrow-down"></div>
+        <div class="box compact">
+          ISIR-PG
+        </div>
+      </div>
+
+      <div class="main-branch-item">
+        <div class="connector-line"></div>
+        <div class="arrow-down"></div>
+        <div class="box">
+          W/D/M NOMINEE
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- New Section: How PGAC Works -->
+  <div style="display: flex;background-color: #ffffff;padding-bottom: 50px; 
+  flex-direction: column;align-items: center;justify-content: center;"
+   class="w-full max-w-4xl mt-12 px-4">
+    <h2 style="margin-top: 75px;color: #004D40 ;text-decoration: underline;margin-bottom: 50px;" 
+    class="text-2xl md:text-3xl font-bold text-green-800 mb-6 text-center">How PGAC Works</h2>
+    
+    <div class="work-section">
+      
+      <!-- General Secretary -->
+      <div class="work-item work-item-odd">
+        <div class="work-card card-gs work-card-left">
+          <div class="number-container">
+            <span class="number">01</span>
+            <div class="icon-circle">
+              <!-- Shield icon for General Secretary -->
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M12 2l8 4v8c0 4.42-3.58 8-8 8s-8-3.58-8-8V6l8-4zm0 2c-3.3 0-6 2.7-6 6v7c0 1.95 1.07 3.65 2.75 4.54C7.78 19.38 8.84 19 10 19c1.16 0 2.22 0.38 3.25 0.54C14.93 19.65 16 17.95 16 16v-7c0-3.3-2.7-6-6-6z" />
+              </svg>
+            </div>
+          </div>
+          <div class="role-content">
+            <h3 class="text-green-900">General Secretary (GSAA-PG)</h3>
+            <p class="text-sm text-gray-700">Oversight of academic affairs for postgraduate students.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- IDR -->
+      <div class="work-item work-item-even">
+        <div class="work-card card-idr work-card-right">
+          <div class="number-container">
+            <span class="number">02</span>
+            <div class="icon-circle">
+              <!-- Graduation cap icon for IDR -->
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M12 3L2 12l10 9 10-9-10-9zM4 12l8 7.2L20 12l-8-7.2L4 12zm8 0l8 7.2L20 12l-8-7.2zM2 13.5v5.5c0 0.55 0.45 1 1 1h18c0.55 0 1-0.45 1-1v-5.5L12 18z"/>
+              </svg>
+            </div>
+          </div>
+          <div class="role-content role-content-right">
+            <h3 class="text-green-900">Institute Doctoral Representative (IDR)</h3>
+            <p class="text-sm text-gray-700">Represents doctoral students within the institute.</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- IMR -->
+      <div class="work-item work-item-odd">
+        <div class="work-card card-imr work-card-left">
+          <div class="number-container">
+            <span class="number">03</span>
+            <div class="icon-circle">
+              <!-- Scroll icon for IMR -->
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M20 2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM4 4h16v16H4V4zm4 4h8v2H8V8zm0 4h8v2H8v-2zm0 4h8v2H8v-2z"/>
+              </svg>
+            </div>
+          </div>
+          <div class="role-content">
+            <h3 class="text-green-900">Institute Master's Representative (IMR)</h3>
+            <p class="text-sm text-gray-700">Represents master's students within the institute.</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- ISIR -->
+      <div class="work-item work-item-even">
+        <div class="work-card card-isir work-card-right">
+          <div class="number-container">
+            <span class="number">04</span>
+            <div class="icon-circle">
+              <!-- Globe icon for ISIR-PG -->
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.8-7-7.93 0-2.45 1.15-4.63 2.95-6.05L12 16h-1c-1.1 0-2-.9-2-2v-2h2c1.1 0 2 .9 2 2v2h1c1.1 0 2 .9 2 2v2c0 0.55-0.45 1-1 1h-1zm-1-3.93c0-0.55-0.45-1-1-1H9c-0.55 0-1-.45-1-1v-2c0-0.55 0.45-1 1-1h2c0.55 0 1 .45 1 1v2c0 0.55-0.45 1-1 1z"/>
+              </svg>
+            </div>
+          </div>
+          <div class="role-content role-content-right">
+            <h3 class="text-green-900">Institute Secatary for International Relations  ( ISIR-PG )</h3>
+            <p class="text-sm text-gray-700">Manages international relations for the institute.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Executive Members -->
+      <div class="work-item work-item-odd">
+        <div class="work-card card-em work-card-left">
+          <div class="number-container">
+            <span class="number">05</span>
+            <div class="icon-circle">
+              <!-- Users icon for Executive Members -->
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.06-.92.12.91.73 1.52 1.94 1.52 3.38V19h7v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
+              </svg>
+            </div>
+          </div>
+          <div class="role-content">
+            <h3 class="text-green-900">Executive Members (EM)</h3>
+            <p class="text-sm text-gray-700">Core members responsible for decision-making.</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- AURAAs -->
+      <div class="work-item work-item-even">
+        <div class="work-card card-auraa work-card-right">
+          <div class="number-container">
+            <span class="number">06</span>
+            <div class="icon-circle">
+              <!-- Magnifying glass icon for AURAAs -->
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 18 8.5C18 5.42 15.42 3 12.5 3S7 5.42 7 8.5 9.58 14 12.5 14c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-5 0c-2.49 0-4.5-2.01-4.5-4.5S9.01 5 11.5 5s4.5 2.01 4.5 4.5-2.01 4.5-4.5 4.5z"/>
+              </svg>
+            </div>
+          </div>
+          <div class="role-content role-content-right">
+            <h3 class="text-green-900">Academic and Research Affairs Associate (AURAA)</h3>
+            <p class="text-sm text-gray-700">Academic representatives advocating for student needs.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ACCs -->
+      <div class="work-item work-item-odd">
+        <div class="work-card card-acc work-card-left">
+          <div class="number-container">
+            <span class="number">07</span>
+            <div class="icon-circle">
+              <!-- Checklist icon for ACCs -->
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M9 16.2l-3.5-3.5c-0.39-0.39-1.01-0.39-1.4 0s-0.39 1.01 0 1.4l4.19 4.19c0.39 0.39 1.01 0.39 1.4 0L20.49 7.7c0.39-0.39 0.39-1.01 0-1.4s-1.01-0.39-1.4 0L9 16.2z"/>
+              </svg>
+            </div>
+          </div>
+          <div class="role-content">
+            <h3 class="text-green-900">Academic Council Coordinator (ACC)</h3>
+            <p class="text-sm text-gray-700">Coordinates academic council activities and initiatives.</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- WDM Nominee -->
+      <div class="work-item work-item-even">
+        <div class="work-card card-wdm work-card-right">
+          <div class="number-container">
+            <span class="number">08</span>
+            <div class="icon-circle">
+              <!-- Wireless icon for WDM -->
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-12v6c0 1.1-.9 2-2 2H7v-2h2V9h2zm4-2h-2c-1.1 0-2 .9-2 2v6c0 1.1.9 2 2 2h2v-2h-2V7h2z"/>
+              </svg>
+            </div>
+          </div>
+          <div class="role-content role-content-right">
+            <h3 class="text-green-900">Web, Design & Media Nominee (W/D/M)</h3>
+            <p class="text-sm text-gray-700">Manages online presence and promotional materials.</p>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+
+  <footer>
+    <div class="container" >
+       <h4 style="font-weight: 400; margin-bottom: 15px;">Stay Connected beyond your college years with PGAC .</h4> 
+      <div>
+        <a href=""><i class="fa-solid fa-envelope"></i></a>
+        <a href=""><i class="fa-brands fa-linkedin"></i></a>
+        <a href=""><i class="fa-brands fa-youtube"></i></a>
+        <a href="https://www.instagram.com/pgac_iitb?igsh=d2l0bW84Nm5meTV0"><i class="fa-brands fa-instagram"></i></a>
+      </div>
+       <p style="color: azure;">&copy; 2025 PGAC - IIT Bombay | All Rights Reserved</p>
+    </div>
+  </footer>
+    
+</body>
+</html>
