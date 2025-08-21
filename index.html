@@ -72,8 +72,10 @@
   <!-- Hero -->
   <section id="home" class="hero">
     <div class="container">
-      <h1>WELCOME TO </h1>  
-      <h2>Post Graduate Academic Council</h2>
+        <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight" style="color: var(--ink);">
+             <span id="typing-text-1"></span></h1>
+      <h2 class="text-2xl sm:text-3xl md:text-4xl font-semibold mt-4" style="color: var(--primary);">
+            <span id="typing-text-2"></span></h2>
       <p>Your Bridge Between Policy and Progress. </p>
       <a href="explore_more.html" class="btn">Explore More <i class="fa-solid fa-arrow-right"></i></a>
     </div>
@@ -422,6 +424,54 @@
        <p style="color: azure;">&copy; 2025 PGAC - IIT Bombay | All Rights Reserved</p>
     </div>
   </footer>
+
+
+    <!-- JavaScript for the typing animation -->
+<script>
+    // Define the texts to be typed
+    const texts = ["WELCOME TO", "Post Graduate Academic Council"];
+    const typingSpeed = 40; // Typing speed in milliseconds
+    const pauseBetweenLines = 500; // Pause for 1 second between lines
+
+    const el1 = document.getElementById("typing-text-1");
+    const el2 = document.getElementById("typing-text-2");
+    let textIndex = 0;
+    let charIndex = 0;
+
+    function typeText() {
+        if (textIndex < texts.length) {
+            const currentText = texts[textIndex];
+            const currentElement = (textIndex === 0) ? el1 : el2;
+            currentElement.classList.add('typing-container');
+
+            function typeCharacter() {
+                if (charIndex < currentText.length) {
+                    currentElement.innerHTML += currentText.charAt(charIndex);
+                    charIndex++;
+                    setTimeout(typeCharacter, typingSpeed);
+                } else {
+                    currentElement.classList.remove('typing-container');
+                    textIndex++;
+                    charIndex = 0;
+                    if (textIndex < texts.length) {
+                        setTimeout(typeText, pauseBetweenLines);
+                    }
+                }
+            }
+            typeCharacter();
+        }
+    }
+
+    // Wait for the window to load before starting the animation
+    window.onload = function() {
+        typeText();
+    }
+</script>
+
+
+
+  
 </body>
 
 </html>
+
