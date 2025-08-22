@@ -14,6 +14,8 @@
 /* General Reset */
 * { margin: 0; padding: 0; box-sizing: border-box; 
   a{user-select: none;-webkit-user-select: none; -webkit-touch-callout: none; -webkit-tap-highlight-color: transparent;}
+*{user-select: none;-webkit-user-select: none; -webkit-touch-callout: none; -webkit-tap-highlight-color: transparent;}
+
   }
 html, body { 
   overflow-x: hidden;   /* ✅ Prevent horizontal scrollbar */
@@ -171,6 +173,7 @@ footer { background: var(--footer);
 
 
  
+
 
 
 
