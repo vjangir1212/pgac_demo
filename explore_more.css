@@ -1,5 +1,7 @@
-* { margin: 0; padding: 0; box-sizing: border-box; 
-   a{user-select: none;-webkit-user-select: none; -webkit-touch-callout: none; -webkit-tap-highlight-color: transparent;}}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+*{user-select: none;-webkit-user-select: none; -webkit-touch-callout: none; -webkit-tap-highlight-color: transparent;}
+
 
 .pgac_structure{
     margin-top: 75px;
@@ -244,11 +246,6 @@
         width: auto;
     }
 
-
-
-
-
-    
     /* Responsive adjustments */
     @media (max-width: 570px) {
       .pgac_structure{display: none;}
@@ -260,5 +257,288 @@
     }
     }
 
-  
 
+        /* ==================================== */
+        /* GLOBAL STYLES & COLOR PALETTE        */
+        /* ==================================== */
+
+        /* Our legacy */
+
+
+
+        /* Using the exact colors provided by the user */
+        :root {
+            --bg: #ffffff;
+            --ink: #0f3836;
+            --primary: #004D40;
+            --accent: #07525e;
+            --muted: #F5F7F7;
+            --card: #ffffff;
+            --footer: #0f3836;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #e6fafa;
+            color: var(--ink);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+        }
+
+        .section {
+            padding: 6rem 0;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        h2 {
+            font-size: 3rem;
+            text-decoration: underline;
+            font-weight: 700;
+            margin-bottom: 3rem;
+            color: var(--primary);
+        }
+
+        /* ==================================== */
+        /* OUR LEGACY SECTION STYLES            */
+        /* ==================================== */
+        
+        .legacy-cards-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+        }
+        
+        .legacy-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: var(--card);
+            padding: 2.5rem 1.5rem;
+            border-radius: 1rem;
+            width: 100%;
+            max-width: 250px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .legacy-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 15px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .card-icon-wrapper {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            background-color: var(--muted);
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .legacy-card-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--ink);
+            margin-bottom: 0.5rem;
+        }
+
+        .legacy-card-description {
+            font-size: 0.9rem;
+            color: #4A5568;
+        }
+        
+        .legacy-card .icon-container { color: var(--accent); }
+        .legacy-card:nth-child(2) .icon-container { color: var(--primary); }
+        .legacy-card:nth-child(3) .icon-container { color: var(--accent); }
+        .legacy-card:nth-child(4) .icon-container { color: var(--primary); }
+
+        /* ==================================== */
+        /* WHAT WE DO SECTION STYLES            */
+        /* ==================================== */
+        
+        .what-we-do-section {
+            background-color: var(--muted);
+            h2{margin-bottom: 0px;}
+        }
+
+        .what-we-do-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem 0;
+            width: 100%;
+        }
+
+        .interactive-chart-container {
+            position: relative;
+            width: 400px;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 3rem;
+        }
+
+        .central-circle {
+            width: 150px;
+            height: 150px;
+            background-color: var(--primary);
+            color: var(--card);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            font-weight: 600;
+            font-size: 1.5rem;
+            z-index: 10;
+            box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: pulse 2s infinite ease-in-out;
+            padding: 1rem;
+            box-sizing: border-box;
+            cursor: pointer; /* Added cursor to indicate interactivity */
+        }
+
+        @keyframes pulse {
+            0% { transform: translate(-50%, -50%) scale(1); }
+            50% { transform: translate(-50%, -50%) scale(1.05); }
+            100% { transform: translate(-50%, -50%) scale(1); }
+        }
+
+        .central-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            padding: 1rem;
+            box-sizing: border-box;
+            opacity: 1;
+            transition: opacity 0.3s ease;
+        }
+
+        .central-description {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 1rem;
+            font-weight: 500;
+            text-align: center;
+            padding: 1rem;
+            box-sizing: border-box;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        /* Container for the petals to enable rotation of all petals together */
+        .petals-rotation-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .activity-petal {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            background-color: var(--card);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            z-index: 5;
+            cursor: pointer; /* Restore cursor for individual petals */
+            transition: transform 0.5s ease-in-out, box-shadow 0.3s ease;
+        }
+        
+        .activity-petal:hover {
+            transform: scale(1.1);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        }
+
+        .activity-petal .icon-wrapper {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 0.5rem;
+            background-color: var(--muted);
+            transition: background-color 0.3s ease;
+        }
+
+        .activity-petal:hover .icon-wrapper {
+            background-color: var(--accent);
+        }
+        
+        .activity-petal:hover .icon-wrapper svg {
+            color: var(--card);
+        }
+
+        .activity-petal-title {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--ink);
+            text-align: center;
+            padding: 0 1rem;
+            transition: opacity 0.3s ease;
+        }
+        
+        /* Positions for the petals, creating a circular layout inside the rotation container */
+        .petal-1 { top: 0; left: 50%; transform: translateX(-50%); }
+        .petal-2 { top: 50%; right: 0; transform: translateY(-50%); }
+        .petal-3 { bottom: 0; left: 50%; transform: translateX(-50%); }
+        .petal-4 { top: 50%; left: 0; transform: translateY(-50%); }
+        
+        /* Icon styling */
+        .icon-container svg {
+            width: 2.25rem;
+            height: 2.25rem;
+            transition: transform 0.3s ease;
+            stroke: currentColor;
+        }
+        .activity-petal .icon-container svg {
+            color: var(--ink); /* Professional color for the icons */
+        }
+
+        .legacy-card:hover .card-icon-wrapper svg {
+            transform: rotate(360deg);
+        }
+
+        /* NEW ANIMATION FOR THE PETALS ROTATION */
+        @keyframes rotateAroundCenter {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); } /* 5 full rotations */
+        }
+
+        .rotating {
+            animation: rotateAroundCenter 0.75s ease-in-out forwards;
+        }
+    
+  
