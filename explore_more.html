@@ -26,7 +26,7 @@
           <li><a href="index.html#about">About</a></li>
           <li><a href="index.html#people">People</a></li>
           <li><a href="index.html#events">Events</a></li>
-          <li><a href="index.html#resources">Explore</a></li>
+          <li><a href="index.html#resources">Resources</a></li>
           <li><a href="index.html#contact">Contact </a></li>
 
         </ul>
@@ -42,16 +42,18 @@
 
 
       <!-- sidebar -->
+      <!-- sidebar -->
         <div class="sidebar">
             <i id="i1" onclick="hidesidebar()" class="fa-solid fa-xmark"></i>
-            <a href="index.html#home"><i class="fa-solid fa-house-chimney"></i> Home</a>
-            <a href="index.html#about"><i class="fa-solid fa-address-card"></i> About</a>
-            <a href="index.html#people"><i class="fa-solid fa-person"></i> People</a>
-            <a href="index.html#events"><i class="fa-solid fa-calendar-days"></i> Events</a>
-            <a href="index.html#resources"><i class="fa-solid fa-magnifying-glass"></i> Explore</a>
-            <a href="index.html#contact"><i class="fa-solid fa-address-book"></i> Contact</a>
+            <a onclick="hidesidebar()" href="index.html"><i class="fa-solid fa-house-chimney"></i> Home</a>
+            <a onclick="hidesidebar()" href="index.html#about"><i class="fa-solid fa-address-card"></i> About</a>
+            <a onclick="hidesidebar()" href="index.html#people"><i class="fa-solid fa-person"></i> People</a>
+            <a onclick="hidesidebar()" href="index.html#events"><i class="fa-solid fa-calendar-days"></i> Events</a>
+            <a onclick="hidesidebar()" href="index.html#resources"><i class="fa-solid fa-database"></i> Resources</a>
+            <a onclick="hidesidebar()" href="index.html#contact"><i class="fa-solid fa-address-book"></i> Contact</a>
+            <a onclick="hidesidebar()" href="explore_more.html"><i class="fa-solid fa-magnifying-glass"></i> Explore More</a>
         </div> 
-
+        
         <script>
             function showsidebar(){
             const sidebar = document.querySelector('.sidebar')
@@ -550,4 +552,5 @@
     
 </body>
 </html>
+
 
