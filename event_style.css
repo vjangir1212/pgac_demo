@@ -1,85 +1,142 @@
-* { margin: 0; padding: 0; box-sizing: border-box; }
 
-    /* Main Content */
-    .event-section {
-      padding: 70px 20px;
-      max-width: 900px;
-      margin: 0 auto;
-    }
-    
-    .section-title {
-      font-size: 2.5rem;
-      font-weight: 700;
-      margin-bottom: 40px;
-      color: #004D40;
-      text-align: center;
-      text-decoration: underline;
-    }
+  /* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
 
-    /* Event List */
-    .event-list {
-      display: flex;
-      flex-direction: column;
-      gap: 30px;
-    }
-    
-    .event-card {
-      display: flex;
-      align-items: flex-start;
-      padding: 20px;
-      background-color: #fff;
-      border-radius: 8px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      position: relative;
-      transition: all 0.3s ease;
-    }
-    
-    .event-card::before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 0;
-      bottom: 0;
-      width: 5px;
-      background-color: #387661;
-      border-radius: 8px 0 0 8px;
-      transition: background-color 0.3s ease;
-    }
-    
-    /* Hover effect */
-    .event-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-      background-color: #387661;
-      color: #fff;
-    }
-    
-    .event-card:hover::before {
-      background-color: #f39c12; /* A vibrant color to make the hover effect pop */
-    }
+/* Section */
+.event-section {
+  padding: 70px 70px;
+  max-width: 900px;
+  margin: 0 auto;
+}
 
-    .event-card-content {
-      margin-left: 20px;
-    }
+/* Title */
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #004d40;
+  text-align: center;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
 
-    .event-card h3 {
-      font-size: 1.5rem;
-      font-weight: 600;
-      margin: 0 0 5px 0;
-      color: #004D40; /* Changed font color */
-      transition: color 0.3s ease;
-    }
-    
-    .event-card p {
-      font-size: 1rem;
-      font-weight: 400;
-      margin: 0;
-      color: #004D40; /* Changed font color */
-      transition: color 0.3s ease;
-    }
+/* Event list */
+.event-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
 
-    /* On hover, text color should be white */
-    .event-card:hover h3, .event-card:hover p {
-      color: #fff;
-    }
+/* Event card container */
+.event-card {
+  position: relative;
+  border-left: #f39c12 solid 5px;
+  background: #ffffff;
+  border-radius:12px;
+  box-shadow: 0 4px 10px rgba(0, 14, 12, 0.15);
+  transition: all 0.3s ease;
+  overflow: visible;
+}
 
+.event-card:hover {
+  transform: translateY(-4px);
+  border-left: #f39c12 solid 5px;
+  box-shadow: 0 3px 8px rgba(0, 14, 12, 0.425);
+}
+
+/* Card header */
+.event-card-header {
+  padding: 25px;
+  border-radius: 10px;
+  background: #fff;
+  transition: all 0.3s ease;
+}
+
+.event-card:hover .event-card-header {
+  background: #387661;
+    border-bottom-left-radius: 0px ;
+  border-bottom-right-radius: 0px ;
+  color: #fff;
+}
+
+.event-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.event-header h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #004d40;
+  transition: color 0.3s ease;
+}
+
+.event-date {
+  color: #387661;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.short-desc {
+  margin-top: 6px;
+  color: #004d40;
+  transition: color 0.3s ease;
+}
+
+/* Hover text color */
+.event-card:hover h3,
+.event-card:hover .short-desc,
+.event-card:hover .event-date {
+  color: #fff;
+}
+
+/* Sliding section below */
+.event-slider {
+  background: #ffffff;
+  border-radius: 0 0 12px 12px;
+  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 0;
+  overflow: hidden;
+
+  /* Start hidden */
+  max-height: 0;
+  opacity: 0;
+  padding: 0 25px;
+  transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.event-slider p {
+  color: #004d40;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 12px 0;
+}
+
+/* When hovered: reveal the slider smoothly downward */
+.event-card:hover .event-slider {
+  max-height: 300px;
+  opacity: 1;
+  padding: 20px 25px;
+  margin-top: 5px;
+}
+
+
+
+/* Responsive */
+@media (max-width: 600px) {
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .event-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+}
