@@ -2,14 +2,18 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="description" content="Official website of the Post Graduate Academic Council (PGAC), IIT Bombay – representing postgraduate academic affairs, events, and student support." />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PGAC - IIT Bombay</title>
+  <title>PGAC</title>
+  <title>Post Graduate Academic Council | IIT Bombay</title>
+
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="team_style.css">
   <link rel="stylesheet" href="event_style.css">
   <link rel="stylesheet" href="explore_style.css">
   <link rel="stylesheet" href="contact_style.css">
-  <link rel="stylesheet" href="explore_more.html">
+  
 
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
@@ -23,7 +27,10 @@
   <!-- Navbar -->
   <header>
     <div class="container nav">
-      <a href="#home" class="logo">PGAC</a>
+      <a href="#home" class="logo">
+        <img src="images/logo_png (1).png" alt="PGAC Logo">
+        <span>PGAC</span>
+      </a>
       <nav>
         <ul class="nav-links">
           <li><a href="#home">Home</a></li>
@@ -57,7 +64,28 @@
             <a onclick="hidesidebar()" href="explore_more.html"><i class="fa-solid fa-magnifying-glass"></i> Explore More</a>
         </div> 
 
-        <script>
+
+
+
+<!-- sidebar Overlay-->
+<!-- <div class="sidebar">
+  <i id="i1" onclick="hidesidebar()" class="fa-solid fa-xmark"></i>
+  <a onclick="hidesidebar()" href="#home"><i class="fa-solid fa-house-chimney"></i> Home</a>
+  <a onclick="hidesidebar()" href="#about"><i class="fa-solid fa-address-card"></i> About</a>
+  <a onclick="hidesidebar()" href="#people"><i class="fa-solid fa-person"></i> People</a>
+  <a onclick="hidesidebar()" href="#events"><i class="fa-solid fa-calendar-days"></i> Events</a>
+  <a onclick="hidesidebar()" href="#resources"><i class="fa-solid fa-database"></i> Resources</a>
+  <a onclick="hidesidebar()" href="#contact"><i class="fa-solid fa-address-book"></i> Contact</a>
+  <a onclick="hidesidebar()" href="explore_more.html"><i class="fa-solid fa-magnifying-glass"></i> Explore More</a>
+</div> -->
+
+<!-- transparent overlay -->
+<div class="overlay" onclick="hidesidebar()"></div>
+
+
+        
+
+        <!-- <script>
             function showsidebar(){
             const sidebar = document.querySelector('.sidebar')
             sidebar.style.display = 'flex'}
@@ -67,7 +95,20 @@
             function hidesidebar(){
             const sidebar = document.querySelector('.sidebar')
             sidebar.style.display = 'none'}
-        </script>  
+        </script>   -->
+
+<script>
+  function showsidebar() {
+    document.querySelector('.sidebar').classList.add('active');
+    document.querySelector('.overlay').classList.add('active');
+  }
+
+  function hidesidebar() {
+    document.querySelector('.sidebar').classList.remove('active');
+    document.querySelector('.overlay').classList.remove('active');
+  }
+</script>
+
 
 
     </div>
@@ -83,7 +124,7 @@
       <h2 class="text-2xl sm:text-3xl md:text-4xl font-semibold mt-4" style="color: var(--primary);">
             <span id="typing-text-2"></span></h2>
 
-      <p>Your Bridge Between Policy and Progress. </p>
+      <p>Empowering student voices to the authorities.</p>
       <a href="explore_more.html" class="explore_btn">Explore More <i class="fa-solid fa-arrow-right"></i></a>
     </div>
   </section>
@@ -113,13 +154,11 @@
  
       <h1 >MEET OUR TEAM</h1>
 
-      <div  class="member_list">
-  
-
-      <!-- Member 0 -->
-      <div class="member-card">
+      <!-- Member GSAA -->
+       <div style="width: 100%;display: flex ;justify-content: center; margin-bottom: 40px;">
+        <div  class="member-card">
         <div class="member-image">
-          <img src="images/gsaa.jpg" alt="Profile of Mr. Teguh Caem">
+          <img src="images/gsaa.jpg" alt="PGAC">
         </div>
         <div class="member-info">
           <div class="member-details">
@@ -141,11 +180,41 @@
             </div>
         </div>         
       </div>
+ 
+       </div>
      
+      <div  class="member_list">
+
+           <!-- Member 0 -->
+      <div class="member-card">
+        <div class="member-image">
+          <img src="images/kunal.jpeg" alt="PGAC">
+        </div>
+        <div class="member-info">
+          <div class="member-details">
+            <h3>Kunal sharma</h3>
+            <p>( Advisor )</p>
+          </div>
+        </div>
+        <!-- NEW: The hover content -->
+        <div class="member-details-hover-design member-details-hover"></div>
+
+        <div class="member-details-hover">
+            <p>Chemical Engineering</p>
+            <div class="member-details-hover-icon-box">
+                <a target="_blank" href="tel:+91 73852 38932"><i class="fa-solid fa-phone"></i></a>
+                <a target="_blank" href="https://wa.me/73852 38932"><i class="fa-brands fa-whatsapp"></i></a>
+                <a target="_blank" href="mailto:204026006@iitb.ac.in"><i class="fa-solid fa-envelope"></i></a>
+                <a target="_blank" href="https://www.instagram.com/kunalsharma6996?igsh=MXlyNGRsMnNrMWIx"><i class="fa-brands fa-instagram"></i></a>
+                <a target="_blank" href="https://www.linkedin.com/in/kunal-kailash-sharma-2b4676137?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+        </div>         
+      </div>
+  
       <!-- Member 1 -->
       <div class="member-card">
         <div class="member-image">
-          <img src="images/isir.png" alt="Profile of Mr. Teguh Caem">
+          <img src="images/isir.png" alt="PGAC">
         </div>
         <div class="member-info">
           <div class="member-details">
@@ -171,7 +240,7 @@
       <!-- Member 2 -->
       <div class="member-card">
         <div class="member-image">
-          <img src="images/satya_em.png" alt="Profile of Mr. Affan Syarif">
+          <img src="images/satya_em.png" alt="PGAC">
         </div>
         <div class="member-info">
           <div class="member-details">
@@ -197,7 +266,7 @@
           <!-- Member 3 -->
       <div class="member-card">
         <div class="member-image">
-          <img src="images/Soumya Agarwal.JPG" alt="Profile of Mr. Rizkan Yazid">
+          <img src="images/Soumya Agarwal.JPG" alt="PGAC">
         </div>
         <div class="member-info">
           <div class="member-details">
@@ -223,7 +292,7 @@
       <!-- Member 4 -->
       <div class="member-card">
         <div class="member-image">
-          <img src="images/mahes_em.png" alt="Profile of Mr. Rizkan Yazid">
+          <img src="images/mahes_em.png" alt="PGAC">
         </div>
         <div class="member-info">
           <div class="member-details">
@@ -250,7 +319,7 @@
       <!-- Member 5 -->
       <div class="member-card">
         <div class="member-image">
-          <img src="images/uzair_em.png" alt="Profile of Mr. Teguh Caem">
+          <img src="images/uzair_em.png" alt="PGAC">
         </div>
         <div class="member-info">
           <div class="member-details">
@@ -276,7 +345,7 @@
           <!-- Web Nominee -->
       <div class="member-card">
         <div class="member-image">
-          <img src="images/vikash.jpeg" alt="Profile of Mr. Rizkan Yazid">
+          <img src="images/vikash.jpeg" alt="PGAC">
         </div>
         <div class="member-info">
           <div class="member-details">
@@ -302,7 +371,7 @@
           <!-- Media Nominee 01-->
       <div class="member-card">
         <div class="member-image">
-          <img src="images/anil_gurjar.jpeg" alt="Profile of Mr. Rizkan Yazid">
+          <img src="images/anil_gurjar.jpeg" alt="PGAC">
         </div>
         <div class="member-info">
           <div class="member-details">
@@ -328,7 +397,7 @@
           <!-- Media Nominee 02-->
       <div class="member-card">
         <div class="member-image">
-          <img src="images/arpandeep.jpeg" alt="Yazid">
+          <img src="images/arpandeep.jpeg" alt="PGAC">
         </div>
         <div class="member-info">
           <div class="member-details">
@@ -354,7 +423,7 @@
           <!-- Media Nominee 03-->
       <div class="member-card">
         <div class="member-image">
-          <img src="images/udit.jpeg" alt="Yazid">
+          <img src="images/udit.jpeg" alt="PGAC">
         </div>
         <div class="member-info">
           <div class="member-details">
@@ -380,7 +449,7 @@
           <!-- Design Nominee 01-->
       <div class="member-card">
         <div class="member-image">
-          <img src="images/manasvi.jpg" alt="Yazid">
+          <img src="images/manasvi.jpg" alt="PGAC">
         </div>
         <div class="member-info">
           <div class="member-details">
@@ -406,7 +475,7 @@
           <!-- Design Nominee 02-->
       <div class="member-card">
         <div class="member-image">
-          <img src="images/jayngyaseniii.jpeg" alt="profile photo">
+          <img src="images/jayngyaseniii.jpeg" alt="PGAC">
         </div>
         <div class="member-info">
           <div class="member-details">
@@ -432,7 +501,7 @@
       <!-- Member 6 -->
       <div class="member-card">
         <div class="member-image">
-          <img src="images/Saurav.jpg" alt="Profile of Mr. Affan Syarif">
+          <img src="images/Saurav.jpg" alt="PGAC">
         </div>
         <div class="member-info">
           <div class="member-details">
@@ -458,7 +527,7 @@
          <!-- Member 7 -->
       <div class="member-card">
         <div class="member-image">
-          <img src="images/suzal.jpg" alt="Profile of Mr. Rizkan Yazid">
+          <img src="images/suzal.jpg" alt="PGAC">
         </div>
         <div class="member-info">
           <div class="member-details">
@@ -486,7 +555,7 @@
       <!-- Member 8 -->
       <div class="member-card">
         <div class="member-image">
-          <img src="images/Samta Arora .jpg" alt="Profile of Mr. Rizkan Yazid">
+          <img src="images/Samta Arora .jpg" alt="PGAC">
         </div>
         <div class="member-info">
           <div class="member-details">
@@ -512,7 +581,7 @@
           <!-- Member 9 -->
       <div class="member-card">
         <div class="member-image">
-          <img src="images/Sneha Ghosh.jpg" alt="Profile of Mr. Rizkan Yazid">
+          <img src="images/Sneha Ghosh.jpg" alt="PGAC">
         </div>
         <div class="member-info">
           <div class="member-details">
@@ -538,7 +607,7 @@
           <!-- Member 10 -->
       <div class="member-card">
         <div class="member-image">
-          <img src="images/Aditya_Aarya.jpeg" alt="Profile of Mr. Rizkan Yazid">
+          <img src="images/Aditya_Aarya.jpeg" alt="PGAC">
         </div>
         <div class="member-info">
           <div class="member-details">
@@ -564,7 +633,7 @@
          <!-- Member 11 -->
       <div class="member-card">
         <div class="member-image">
-          <img src="images/Roveen.JPG" alt="Profile of Mr. Rizkan Yazid">
+          <img src="images/Roveen.JPG" alt="PGAC">
         </div>
         <div class="member-info">
           <div class="member-details">
@@ -592,7 +661,7 @@
          <!-- Member 12 -->
       <div class="member-card">
         <div class="member-image">
-          <img src="images/Vamshi Chauha.jpg" alt="Profile of Mr. Rizkan Yazid">
+          <img src="images/Vamshi Chauha.jpg" alt="PGAC">
         </div>
         <div class="member-info">
           <div class="member-details">
@@ -618,7 +687,7 @@
          <!-- Member 13 -->
       <div class="member-card">
         <div class="member-image">
-          <img src="images/AkankshaDadhich.jpg" alt="Profile of Mr. Rizkan Yazid">
+          <img src="images/AkankshaDadhich.jpg" alt="PGAC">
         </div>
         <div class="member-info">
           <div class="member-details">
@@ -644,7 +713,7 @@
          <!-- Member 14 -->
       <div class="member-card">
         <div class="member-image">
-          <img src="images/Anita.jpeg" alt="Profile of Mr. Rizkan Yazid">
+          <img src="images/Anita.jpeg" alt="PGAC">
         </div>
         <div class="member-info">
           <div class="member-details">
@@ -670,7 +739,7 @@
          <!-- Member 15 -->
       <div class="member-card">
         <div class="member-image">
-          <img src="images/Tarun Pandey.jpeg" alt="Profile of Mr. Rizkan Yazid">
+          <img src="images/Tarun Pandey.jpeg" alt="PGAC">
         </div>
         <div class="member-info">
           <div class="member-details">
@@ -696,7 +765,7 @@
          <!-- Member 16 -->
       <div class="member-card">
         <div class="member-image">
-          <img src="images/Anmol_Gupta.jpeg" alt="Profile of Mr. Rizkan Yazid">
+          <img src="images/Anmol_Gupta.jpeg" alt="PGAC">
         </div>
         <div class="member-info">
           <div class="member-details">
@@ -722,7 +791,7 @@
          <!-- Member 17 -->
       <div class="member-card">
         <div class="member-image">
-          <img src="images/Sriya.jpg" alt="Profile of Mr. Rizkan Yazid">
+          <img src="images/Sriya.jpg" alt="PGAC">
         </div>
         <div class="member-info">
           <div class="member-details">
@@ -748,7 +817,7 @@
          <!-- Member 18 -->
       <div class="member-card">
         <div class="member-image">
-          <img src="images/Indrani Das.jpg" alt="Profile of Mr. Rizkan Yazid">
+          <img src="images/Indrani Das.jpg" alt="PGAC">
         </div>
         <div class="member-info">
           <div class="member-details">
@@ -774,7 +843,7 @@
          <!-- Member 19 -->
       <div class="member-card">
         <div class="member-image">
-          <img src="images/Annesha Das.jpg" alt="Profile of Mr. Rizkan Yazid">
+          <img src="images/Annesha Das.jpg" alt="PGAC">
         </div>
         <div class="member-info">
           <div class="member-details">
@@ -800,7 +869,7 @@
          <!-- Member 20 -->
       <div class="member-card">
         <div class="member-image">
-          <img src="images/Shakti Kumar Sahoo .jpg" alt="Profile of Mr. Rizkan Yazid">
+          <img src="images/Shakti Kumar Sahoo .jpg" alt="PGAC">
         </div>
         <div class="member-info">
           <div class="member-details">
@@ -826,7 +895,7 @@
          <!-- Member 21 -->
       <div class="member-card">
         <div class="member-image">
-          <img src="images/Shailaja Manchala.jpg" alt="Profile of Mr. Rizkan Yazid">
+          <img src="images/Shailaja Manchala.jpg" alt="PGAC">
         </div>
         <div class="member-info">
           <div class="member-details">
@@ -852,7 +921,7 @@
          <!-- Member 22 -->
       <div class="member-card">
         <div class="member-image">
-          <img src="images/Deepshikha.jpg" alt="Profile of Mr. Rizkan Yazid">
+          <img src="images/Deepshikha.jpg" alt="PGAC">
         </div>
         <div class="member-info">
           <div class="member-details">
@@ -879,7 +948,7 @@
 <!-- Member 23 -->
 <div class="member-card">
   <div class="member-image">
-    <img src="images/niishant.jpeg" alt="Profile of Mr. Nishant Kumar">
+    <img src="images/niishant.jpeg" alt="PGAC">
   </div>
   <div class="member-info">
     <div class="member-details">
@@ -907,7 +976,7 @@
 <!-- Member 24 -->
 <div class="member-card">
   <div class="member-image">
-    <img src="images/banty.jpeg" alt="Profile of Mr. Banty Kumar">
+    <img src="images/banty.jpeg" alt="PGAC">
   </div>
   <div class="member-info">
     <div class="member-details">
@@ -935,7 +1004,7 @@
 <!-- Member 25 -->
 <div class="member-card">
   <div class="member-image">
-    <img src="images/parth.png" alt="Profile of Mr. Parth Vyas">
+    <img src="images/parth.png" alt="PGAC">
   </div>
   <div class="member-info">
     <div class="member-details">
@@ -963,7 +1032,7 @@
 <!-- Member 26 -->
 <div class="member-card">
   <div class="member-image">
-    <img src="images/niharika.jpeg" alt="Profile of Ms. Niharika">
+    <img src="images/niharika.jpeg" alt="PGAC">
   </div>
   <div class="member-info">
     <div class="member-details">
@@ -990,7 +1059,7 @@
 <!-- Member 27 -->
 <div class="member-card">
   <div class="member-image">
-    <img src="images/Tamal 3.JPG" alt="Profile of Mr. Tamal Halder">
+    <img src="images/Tamal 3.JPG" alt="PGAC">
   </div>
   <div class="member-info">
     <div class="member-details">
@@ -1018,7 +1087,7 @@
 <!-- Member 28 -->
 <div class="member-card">
   <div class="member-image">
-    <img src="Accs/ACC_Durga Choudhary .jpg" alt="Profile of Ms. Durga Choudhary">
+    <img src="Accs/ACC_Durga Choudhary .jpg" alt="PGAC">
   </div>
   <div class="member-info">
     <div class="member-details">
@@ -1046,7 +1115,7 @@
 <!-- Member 29 -->
 <div class="member-card">
   <div class="member-image">
-    <img src="Accs/nitya.jpeg" alt="Profile of Ms. Nithyashree M V">
+    <img src="Accs/nitya.jpeg" alt="PGAC">
   </div>
   <div class="member-info">
     <div class="member-details">
@@ -1073,7 +1142,7 @@
 <!-- Member 30 -->
 <div class="member-card">
   <div class="member-image">
-    <img src="Accs/sugandha.jpeg" alt="Profile of Ms. Sugandha Singh">
+    <img src="Accs/sugandha.jpeg" alt="PGAC">
   </div>
   <div class="member-info">
     <div class="member-details">
@@ -1101,7 +1170,7 @@
 <!-- Member 31 -->
 <div class="member-card">
   <div class="member-image">
-    <img src="Accs/ACC_Devansh_Srivastava.jpg" alt="Profile of Mr. Devansh Srivastava">
+    <img src="Accs/ACC_Devansh_Srivastava.jpg" alt="PGAC">
   </div>
   <div class="member-info">
     <div class="member-details">
@@ -1128,7 +1197,7 @@
 <!-- Member 32 -->
 <div class="member-card">
   <div class="member-image">
-    <img src="Accs/ACC_Katyani Mehta.jpg" alt="Profile of Ms. Katyani Mehta">
+    <img src="Accs/ACC_Katyani Mehta.jpg" alt="PGAC">
   </div>
   <div class="member-info">
     <div class="member-details">
@@ -1155,7 +1224,7 @@
 <!-- Member 33 -->
 <div class="member-card">
   <div class="member-image">
-    <img src="Accs/ACC_Mansi Singh..jpg" alt="Profile of Ms. Mansi Singh">
+    <img src="Accs/ACC_Mansi Singh..jpg" alt="PGAC">
   </div>
   <div class="member-info">
     <div class="member-details">
@@ -1182,7 +1251,7 @@
 <!-- Member 34 -->
 <div class="member-card">
   <div class="member-image">
-    <img src="Accs/ACC_Amanjot kaur.jpg" alt="Profile of Ms. Amanjot Kaur">
+    <img src="Accs/ACC_Amanjot kaur.jpg" alt="PGAC iit bombay">
   </div>
   <div class="member-info">
     <div class="member-details">
@@ -1209,7 +1278,7 @@
 <!-- Member 35 -->
 <div class="member-card">
   <div class="member-image">
-    <img src="Accs/ACC_Garima Singh.jpg" alt="Profile of Ms. Garima Singh">
+    <img src="Accs/ACC_Garima Singh.jpg" alt="PGAC iit bombay">
   </div>
   <div class="member-info">
     <div class="member-details">
@@ -1236,7 +1305,7 @@
 <!-- Member 36 -->
 <div class="member-card">
   <div class="member-image">
-    <img src="Accs/ACC_Ayushmann.jpg" alt="Profile of Mr. Ayushmann">
+    <img src="Accs/ACC_Ayushmann.jpg" alt="PGAC iit bombay">
   </div>
   <div class="member-info">
     <div class="member-details">
@@ -1263,7 +1332,7 @@
 <!-- Member 37 -->
 <div class="member-card">
   <div class="member-image">
-    <img src="Accs/ACC_Narendra_Dhaka.jpg" alt="Profile of Mr. Narendra Dhaka">
+    <img src="Accs/ACC_Narendra_Dhaka.jpg" alt="PGAC iit bombay">
   </div>
   <div class="member-info">
     <div class="member-details">
@@ -1290,7 +1359,7 @@
 <!-- Member 38 -->
 <div class="member-card">
   <div class="member-image">
-    <img src="Accs/abhu.jpeg" alt="Profile of Ms. Abu Pargavi P">
+    <img src="Accs/abhu.jpeg" alt="PGAC iit bombay">
   </div>
   <div class="member-info">
     <div class="member-details">
@@ -1317,7 +1386,7 @@
 <!-- Member 39 -->
 <div class="member-card">
   <div class="member-image">
-    <img src="Accs/ACC_LipsitaRath.jpg" alt="Profile of Ms. Lipsita Rath">
+    <img src="Accs/ACC_LipsitaRath.jpg" alt="PGAC iit bombay">
   </div>
   <div class="member-info">
     <div class="member-details">
@@ -1344,7 +1413,7 @@
 <!-- Member 40 -->
 <div class="member-card">
   <div class="member-image">
-    <img src="Accs/ACC_Jakka Durga Prasad.jpg" alt="Profile of Mr. Jakka Durga Prasad">
+    <img src="Accs/ACC_Jakka Durga Prasad.jpg" alt="PGAC iit bombay">
   </div>
   <div class="member-info">
     <div class="member-details">
@@ -1377,7 +1446,7 @@
 
   <!-- Events -->
 
-  
+
   <section id="events" class="event-section">
     <h1 class="section-title">Events</h1>
 
@@ -1438,20 +1507,37 @@
   <section  id="resources" class="resources-section">
     <h1 class="section-title">Resources</h1>
     
-    <div class="resource-grid">
-      <div class="resource-card">
-        <div class="icon-container"><i class="fa-solid fa-calendar-days"></i>        </div>
-        <h3>Academic Calendar</h3>
-        <p>Important dates for the academic year.</p>
-        <a href="pdfs/Academic Calendar 2025-26_FINAL.pdf" class="download-button" download>Download</a>
-      </div>
+    <div style="display: flex;flex-direction: row;flex-wrap: wrap;justify-content: center;" class="resource-grid">
       
-      <div class="resource-card">
+        <div style="width: 250px;" class="resource-card">
+        <div class="icon-container"><i class="fa-solid fa-book"></i>        </div>
+        <h3>M.Sc. RuleBook</h3>
+        <p>Essential guide for PG students at IIT Bombay.</p>
+        <a href="https://acad.iitb.ac.in/files/M.Sc_.%20Rules.pdf" class="download-button" download>Download</a>
+      </div>
+ 
+        <div style="width: 250px;" class="resource-card">
+        <div class="icon-container"><i class="fa-solid fa-book"></i>        </div>
+        <h3>M.Tech. RuleBook</h3>
+        <p>Essential guide for PG students at IIT Bombay.</p>
+        <a href="https://acad.iitb.ac.in/files/M.Tech_.%20MPP.%20M.Des_.%20MBA%20Rules_0.pdf" class="download-button" download>Download</a>
+      </div>
+          
+      <div style="width: 250px;" class="resource-card">
         <div class="icon-container"><i class="fa-solid fa-book"></i>        </div>
         <h3>Ph.D. RuleBook</h3>
         <p>Essential guide for PG students at IIT Bombay.</p>
         <a href="pdfs/PhdRules2026.pdf" class="download-button" download>Download</a>
       </div>
+
+      <div style="width: 250px;" class="resource-card">
+        <div class="icon-container"><i class="fa-solid fa-calendar-days"></i>        </div>
+        <h3>Academic Calendar</h3>
+        <p>Important dates for the academic year.</p>
+        <a href="pdfs/Academic Calendar 2025-26_FINAL.pdf" class="download-button" download>Download</a>
+      </div>
+
+
     </div>
   </section>
 
@@ -1467,23 +1553,18 @@
             <div class="info-icon"><i class="fa-regular fa-envelope"></i> </div>
             <div class="info-text">
               <h3>Email :</h3>
-              <a href="mailto:pgac@iitb.ac.in">pgac@iitb.ac.in</a>
-            </div>
+              <div style="display: flex;flex-wrap: wrap;">
+                  <a style="margin-right: 35px;" href="mailto:pgac@iitb.ac.in">gsecaapg@iitb.ac.in</a>
+                  <a  href="mailto:pgac@iitb.ac.in">pgac.iitbombay@gmail.com</a> 
+              </div>
+             </div>
           </div>
-          
-          <div class="info-item">
-            <div class="info-icon"><i class="fa-solid fa-building-circle-check"></i>            </div>
-            <div class="info-text">
-              <h3>Office :</h3>
-              <p>PG Council Room, IIT Bombay</p>
-            </div>
-          </div>
-          
+  
           <div class="info-item">
             <div class="info-icon"><i class="fa-solid fa-globe"></i>            </div>
             <div class="info-text">
               <h3>Website :</h3>
-              <a href="https://www.iitb.ac.in/" target="_blank">www.iitb.ac.in</a>
+              <a href="https://gymkhana.iitb.ac.in/~pgacademics/" target="_blank">https://gymkhana.iitb.ac.in/~pgacademics/</a>
             </div>
           </div>
         </div>
@@ -1515,9 +1596,9 @@
     <div class="container" >
        <h4 style="font-weight: 400; margin-bottom: 15px;">Stay Connected beyond your college years with PGAC .</h4> 
       <div>
-        <a href="mailto:pgac@iitb.ac.in"><i class="fa-solid fa-envelope"></i></a>
-        <a href=""><i class="fa-brands fa-linkedin"></i></a>
-        <a href=""><i class="fa-brands fa-youtube"></i></a>
+        <a href="mailto:gsecaapg@iitb.ac.in"><i class="fa-solid fa-envelope"></i></a>
+        <a href="https://www.linkedin.com/company/post-graduate-academic-council-iit-bombay/?originalSubdomain=in"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://youtube.com/@pgcampiitb?si=sI3zSklD4w6sOsQs"><i class="fa-brands fa-youtube"></i></a>
         <a href="https://www.instagram.com/pgac_iitb?igsh=d2l0bW84Nm5meTV0"><i class="fa-brands fa-instagram"></i></a>
       </div>
        <p style="color: azure;">&copy; 2025 PGAC - IIT Bombay | All Rights Reserved</p>

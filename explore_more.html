@@ -17,10 +17,13 @@
 </head>
 <body>
 
-    <!-- Navbar -->
+  <!-- Navbar -->
   <header>
     <div  class="container nav">
-      <a style="margin-left: -20px;" href="index.html#home" class="logo">PGAC</a>
+      <a href="index.html" class="logo">
+        <img src="images/logo_png (1).png" alt="PGAC Logo">
+        <span>PGAC</span>
+      </a>
       <nav>
         <ul class="nav-links">
           <li><a href="index.html#home">Home</a></li>
@@ -37,7 +40,7 @@
 
 
       <!-- Hamburger Icon -->
-        <div style="margin-right: -20px;" class="hamburger">
+        <div  class="hamburger">
             <i onclick="showsidebar()" class="fa-solid fa-bars-staggered"></i>
          </div>
 
@@ -45,7 +48,7 @@
       <!-- sidebar -->
         <div class="sidebar">
             <i id="i1" onclick="hidesidebar()" class="fa-solid fa-xmark"></i>
-            <a onclick="hidesidebar()" href="index.html"><i class="fa-solid fa-house-chimney"></i> Home</a>
+            <a onclick="hidesidebar()" href="index.html#home"><i class="fa-solid fa-house-chimney"></i> Home</a>
             <a onclick="hidesidebar()" href="index.html#about"><i class="fa-solid fa-address-card"></i> About</a>
             <a onclick="hidesidebar()" href="index.html#people"><i class="fa-solid fa-person"></i> People</a>
             <a onclick="hidesidebar()" href="index.html#events"><i class="fa-solid fa-calendar-days"></i> Events</a>
@@ -54,17 +57,37 @@
             <a onclick="hidesidebar()" href="explore_more.html"><i class="fa-solid fa-magnifying-glass"></i> Explore More</a>
         </div> 
 
-        <script>
-            function showsidebar(){
-            const sidebar = document.querySelector('.sidebar')
-            sidebar.style.display = 'flex'}
-        </script> 
-        
-        <script>
-            function hidesidebar(){
-            const sidebar = document.querySelector('.sidebar')
-            sidebar.style.display = 'none'}
-        </script>  
+
+
+
+<!-- sidebar Overlay-->
+<!-- <div class="sidebar">
+  <i id="i1" onclick="hidesidebar()" class="fa-solid fa-xmark"></i>
+  <a onclick="hidesidebar()" href="#home"><i class="fa-solid fa-house-chimney"></i> Home</a>
+  <a onclick="hidesidebar()" href="#about"><i class="fa-solid fa-address-card"></i> About</a>
+  <a onclick="hidesidebar()" href="#people"><i class="fa-solid fa-person"></i> People</a>
+  <a onclick="hidesidebar()" href="#events"><i class="fa-solid fa-calendar-days"></i> Events</a>
+  <a onclick="hidesidebar()" href="#resources"><i class="fa-solid fa-database"></i> Resources</a>
+  <a onclick="hidesidebar()" href="#contact"><i class="fa-solid fa-address-book"></i> Contact</a>
+  <a onclick="hidesidebar()" href="explore_more.html"><i class="fa-solid fa-magnifying-glass"></i> Explore More</a>
+</div> -->
+
+<!-- transparent overlay -->
+<div class="overlay" onclick="hidesidebar()"></div>
+    
+
+<script>
+  function showsidebar() {
+    document.querySelector('.sidebar').classList.add('active');
+    document.querySelector('.overlay').classList.add('active');
+  }
+
+  function hidesidebar() {
+    document.querySelector('.sidebar').classList.remove('active');
+    document.querySelector('.overlay').classList.remove('active');
+  }
+</script>
+
 
 
     </div>
@@ -539,8 +562,8 @@
        <h4 style="font-weight: 400; margin-bottom: 15px;">Stay Connected beyond your college years with PGAC .</h4> 
       <div>
         <a href="mailto:pgac@iitb.ac.in"><i class="fa-solid fa-envelope"></i></a>
-        <a href=""><i class="fa-brands fa-linkedin"></i></a>
-        <a href=""><i class="fa-brands fa-youtube"></i></a>
+        <a href="https://www.linkedin.com/company/post-graduate-academic-council-iit-bombay/?originalSubdomain=in"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://youtube.com/@pgcampiitb?si=sI3zSklD4w6sOsQs"><i class="fa-brands fa-youtube"></i></a>
         <a href="https://www.instagram.com/pgac_iitb?igsh=d2l0bW84Nm5meTV0"><i class="fa-brands fa-instagram"></i></a>
       </div>
        <p style="color: azure;">&copy; 2025 PGAC - IIT Bombay | All Rights Reserved</p>
